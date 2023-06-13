@@ -26,6 +26,16 @@ export class AnuncioComponent {
     });
   }
 
+  getAnuncios() {
+    this.anuncioService.getAnuncios().subscribe({
+      next: (data) => {
+        this.anuncio = data;
+        console.log(this.anuncio);
+      },
+      error: () => console.log('Error to call endpoint'),
+    });
+  }
+
   save() {
     this.anuncioService.save(this.formGroupAnuncio.value).subscribe({
       next: (data) => {
