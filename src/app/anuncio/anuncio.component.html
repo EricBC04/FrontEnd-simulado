@@ -1,1 +1,54 @@
-<p>anuncio works!</p>
+<div class="row">
+  <div class="col-8 m-auto mt-5">
+    <form [formGroup]="formGroupAnuncio">
+      <div class="mb-3">
+        <label for="image" class="form-label" autofocus>Informe o URL da Imagem</label>
+        <input
+          type="text"
+            formControlName="image"
+              class="form-control"
+                id="image"
+                  placeholder="Digite a Url da Imagem"
+                    />
+                    </div>
+
+      <div class="mb-3">
+        <label for="tittle" class="form-label">Informe o Título do Anuncio</label>
+        <input
+          type="text"
+            formControlName="tittle"
+              class="form-control"
+                id="tittle"
+                  placeholder="Informe o Título do seu anuncio"
+                    />
+                      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Informe a Descrição do Anuncio</label>
+        <input
+          type="text"
+            formControlName="description"
+              class="form-control"
+                id="description"
+                  placeholder="De uma descrição para o anuncio"
+                    />
+                      </div>
+
+      <div class="mb-3">
+        <label for="advertiser" class="form-label">Informe o Anunciante</label>
+        <input
+          type="text"
+            formControlName="advertiser"
+              class="form-control"
+                id="advertiser"
+                  placeholder="Digite o anunciante do seu anuncio"
+                    />
+                      </div>
+
+      <div class="mb-3 d-flex justify-content-end">
+        <button class="btn btn-primary" (click)="save()">Salvar</button>
+          </div>
+            </form>
+              </div>
+
+</div>
